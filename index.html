@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+
+<style>
+    div{
+    width: 100px;
+    height: 100px;
+    background-color: cyan;
+    margin: 10px;
+}
+</style>
+<body onload="myfunction()" onresize="onResize()" onunload="onUnload()">
+    <h1>Mouse Events</h1>
+    
+    <input type="button" value="change-background" onclick="onclickevent()">
+
+<div onmouseover="onMouseover()" onmouseout="onMouseout()" onmousedown="onMouseDown()" onmouseup="onMouseUp()">
+</div>
+
+<br><br><br> <br>
+
+<h1>Keyboard Events</h1>
+
+<!-- keyboard Events -->
+<input type="text" onkeydown="OnKeyDown()" onkeyup="OnKeyUp()">
+ <br><br><br><br>
+
+ <h1>Form Events</h1>
+
+<!-- // form Event   -->
+
+<form onsubmit="OnSubmit()">
+
+
+    <input type="text" onfocus="OnFocus()" onblur="OnBlur()" >  <br><br>
+
+    <select id="myDropdown" onchange="OnChange()">
+    <option value="">--Select--</option>
+    <option value="">Male</option>
+    <option value="">Female</option>
+</select>
+
+<br><br><br>
+    <input type="submit" value="submit">
+
+
+</form>  
+<br><br><br><br>
+<!-- // Window/Document Events  -->
+
+
+
+
+</body>
+
+
+
+<script>
+    function onclickevent() {
+   document.body
+   .style.backgroundColor="yellow";
+    }
+
+    function onMouseover() {
+        document.body.style.backgroundColor="lightgreen"
+    }
+
+    function onMouseout(){
+
+        document.body.style.backgroundColor="red"
+    }
+
+
+function onMouseDown() {
+    document.body.style.backgroundColor="black"
+    // alert("OnMouseDown event is fire")
+}
+
+function onMouseUp() {
+    document.body.style.backgroundColor="blue";
+}
+
+// keyboard Events
+
+function OnKeyDown(){
+    document.body.style.background="darkviolet";
+}
+
+function OnKeyUp() {
+    document.body.style.backgroundColor="cyan";
+}
+
+
+// form Event  
+
+
+function OnFocus() {
+    document.body.style.backgroundColor="brown";
+}
+
+function OnBlur() {
+    document.body.style.backgroundColor="black";
+}
+function OnSubmit() {
+    document.body.style.backgroundColor="blue";
+    alert("form Submitted Successfully")
+    
+}
+
+function OnChange()
+ {
+    document.body.style.backgroundColor="yellow";
+}
+
+// Window/Document Events 
+
+
+function myfunction() {
+    alert("window is loaded");
+}
+
+function onUnload() {
+    alert("window is closed")
+} 
+function onResize() {
+document.body.style.backgroundColor="blue"
+}
+ </script>
+</html>
